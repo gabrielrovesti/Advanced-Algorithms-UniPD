@@ -1,0 +1,33 @@
+Approx algos structure:
+
+- GREEDY <= PROPERTY <= OPT
+
+Or (using VC = min problem = 2-approx algo)
+
+- V' <= property <= 2V*
+
+
+1) Lower bound to the cost of V*
+
+V* = This is the absolute best (minimum) solution that can be achieved for the problem. It represents the lowest possible value of the objective function (e.g., cost, length, weight, etc.) that satisfies all constraints of the problem.
+
+The algorithm respects a property. The optimal choice would definitely at least respect that property and then select the least possible.
+So, in terms of the algo, it's the worst possible choice over the minimum one (so, to select all, and so to respect the general problem property). 
+
+Any property or solution provided by the algorithm must respect and cannot surpass this benchmark (V*) in terms of minimization
+
+2) Upper bound to the cost of V'
+
+V' = This is the solution provided by the greedy or approximation algorithm. While this solution is feasible (i.e., it satisfies the problem's constraints), it may not be the optimal (minimum possible) solution. Instead, it is typically easier to compute and close to the optimal.
+
+This means that, found the general property to respect, the greedy choice made by the algo is at most that one.
+
+
+- Prove a general lower bound:
+
+-> Demonstrate that there exist instances where the algorithm performs at the approximation limit, indicating the tightness of the bound
+
+-> Construct an input instance designed to force the algorithm into a worst-case scenario.
+
+--> |V'| = 2 * |V*|
+
